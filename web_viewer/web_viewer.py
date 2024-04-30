@@ -343,8 +343,8 @@ class Crawler():
 
     def get_unsorted_runs(self, user):
         """Similar to get_users(): returns a list of all run directories for a given user."""
-
         d = join(self.path, user)
+        print([ r[0] for r in listdir(d)])
         return [ r for r in listdir(d) if ((r[0] != '_') and exists(join(d,r,'rf_pipeline_0.json'))) ]
 
 
@@ -359,8 +359,9 @@ class Crawler():
         """
 
         runs = dict()
-
+        print(self.get_unsorted_runs(user))
         for run in self.get_unsorted_runs(user):
+            print(run)
             prefix = run[:-18]
             if prefix not in runs:
                 # We need to add a new key
@@ -445,7 +446,7 @@ def runs(user):
         display += '<p>Reminder: to clean up old runs, go to %s/%s and delete subdirectories by hand.\n' % (web_viewer_root, user)
 
     display += '<p><ul>\n'
-
+    print(master_directories.get_sorted_runs(user))
     for (prefix, runs) in master_directories.get_sorted_runs(user):
         run_urls = [ ]
         for run in runs:

@@ -620,7 +620,7 @@ void chime_slow_pulsar_writer::_process_chunk(float *intensity, ssize_t istride,
     //double dt = (std::chrono::duration<double>(dstn_t1 - dstn_t0).count());
     struct timeval dstn_t1 = xgettimeofday();
     double dt = usec_between(dstn_t0, dstn_t1) * 1e-6;
-    cout << "SPS writer took " << dt << " seconds" << endl;
+    //cout << "SPS writer took " << dt << " seconds" << endl;
 }
 
 
