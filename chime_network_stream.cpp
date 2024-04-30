@@ -105,6 +105,7 @@ void chime_network_stream::_start_pipeline(Json::Value &j)
     j["beam_id"] = beam_id;
     j["initial_fpga_count"] = Json::UInt64(fpga0);
     j["fpga_counts_per_sample"] = fpga_counts_per_sample;
+    j["frame0_nano"] = Json::UInt64(stream->get_frame0_nano());
 }
 
 
