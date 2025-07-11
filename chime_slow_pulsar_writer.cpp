@@ -674,7 +674,7 @@ shared_ptr<chime_slow_pulsar_writer> chime_slow_pulsar_writer::from_json(const J
 
     key = "name";
     if (j.isMember(key))
-+        name = j[key].asString();
+        name = j[key].asString();
     key = "nfreq_out";
     if (j.isMember(key))
         nfreq_out = j[key].asInt();
