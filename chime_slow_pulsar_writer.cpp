@@ -135,8 +135,6 @@ void chime_slow_pulsar_writer::set_params(const ssize_t beam_id, const ssize_t n
 
         pstate->nsamp = pstate->nfreq_out * pstate->ntime_out;
 
-        chlog("Slow pulsar downswampler: " << pstate->downsampler << std::endl);
-
         // TODO check parameter consistency with existing file_header?
         pstate->nbins = nbins;
 
